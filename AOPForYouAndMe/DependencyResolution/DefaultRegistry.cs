@@ -15,6 +15,10 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using AOPForYouAndMe.Part1.Scattered.Models.Caching;
+using AOPForYouAndMe.Part1.Scattered.Models.Services;
+using Castle.DynamicProxy;
+
 namespace AOPForYouAndMe.DependencyResolution {
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
@@ -29,12 +33,15 @@ namespace AOPForYouAndMe.DependencyResolution {
                     scan.WithDefaultConventions();
 					scan.With(new ControllerConvention());
                 });
-            //                            x.For<IReportService>().Use<ReportService>()
-            //                                .EnrichWith(i => new ReportCacheDecorator(i));
 
-            //                            var proxyGenerator = new ProxyGenerator();
-            //                            x.For<IReportService>().Use<ReportService>()
-            //                                .EnrichWith(i => proxyGenerator.CreateInterfaceProxyWithTargetInterface<IReportService>(i, new CacheInterceptor()));
+                // 5
+//                For<IReportService>().Use<ReportService>()
+//                    .DecorateWith(i => new ReportCacheDecorator(i));
+
+                // 6
+//                var proxyGenerator = new ProxyGenerator();
+//                For<IReportService>().Use<ReportService>()
+//                    .DecorateWith(i => proxyGenerator.CreateInterfaceProxyWithTargetInterface(i, new CacheInterceptor()));
         }
 
         #endregion

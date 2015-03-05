@@ -136,7 +136,9 @@
     <Compile Include="Models\Caching\ReportCacheDecorator.cs" />
     <Compile Include="Models\DataLayer\IReportDataService.cs" />
     <Compile Include="Models\DataLayer\ReportDataService.cs" />
-    <Compile Include="Models\Services\1_ReportService.cs" />
+    <Compile Include="Models\Services\1_ReportService.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Models\Services\IReportService.cs" />
     <Compile Include="Models\ViewModels\ReportViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
