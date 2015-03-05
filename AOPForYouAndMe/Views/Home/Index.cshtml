@@ -1,0 +1,49 @@
+﻿@model AOPForYouAndMe.Part1.Scattered.Models.ViewModels.ReportViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Report</h2>
+
+@using (@Html.BeginForm())
+{
+    <fieldset>
+        <legend>Report Parameters</legend>
+        <p>
+            @Html.LabelFor(m => m.GroupId)
+            @Html.EditorFor(m => m.GroupId)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.AreForumsIncluded)
+            @Html.DropDownListFor(m => m.AreForumsIncluded, new List<SelectListItem>
+                {
+                    new SelectListItem { Text = "", Value = ""},
+                    new SelectListItem { Text = "No", Value = "false"},
+                    new SelectListItem { Text = "Yes", Value = "true"}
+                })
+        </p>
+        <input type="submit" value="Submit"/>
+    </fieldset>
+}
+
+@if (@Model.Results != null)
+{
+    <fieldset>
+        <legend>Report Results</legend>
+        
+        <p><strong>Total Views:</strong> @Model.Results.TotalViews</p>
+        <p><strong>Total Threads:</strong> @Model.Results.TotalThreads</p>
+        <p><strong>Total Users:</strong> @Model.Results.TotalUsers</p>
+    </fieldset>
+}
+
+<fieldset>
+    <legend>Cache Debug</legend>
+    <ul>
+    @foreach (var cacheItem in @ViewBag.CacheDebug)
+    {
+        <li>@cacheItem</li>
+    }
+    </ul>
+</fieldset>
