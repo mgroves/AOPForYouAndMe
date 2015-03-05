@@ -1,8 +1,5 @@
 namespace AOPForYouAndMe.DependencyResolution {
     using System.Web;
-
-    using AOPForYouAndMe.App_Start;
-
     using StructureMap.Web.Pipeline;
 
     public class StructureMapScopeModule : IHttpModule {

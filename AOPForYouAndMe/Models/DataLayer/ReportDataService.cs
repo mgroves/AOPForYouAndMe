@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading;
-using AOPForYouAndMe.Part1.Scattered.Models.Api;
+using AOPForYouAndMe.Models.Api;
 
-namespace AOPForYouAndMe.Part1.Scattered.Models.DataLayer
+namespace AOPForYouAndMe.Models.DataLayer
 {
     public class ReportDataService : IReportDataService
     {

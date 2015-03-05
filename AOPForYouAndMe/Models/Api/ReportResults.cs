@@ -1,4 +1,4 @@
-﻿namespace AOPForYouAndMe.Part1.Scattered.Models.Api
+﻿namespace AOPForYouAndMe.Models.Api
 {
     public class ReportResults
     {

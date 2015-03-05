@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Web;
 using System.Web.Caching;
-using AOPForYouAndMe.Part1.Scattered.Models.Api;
-using AOPForYouAndMe.Part1.Scattered.Models.DataLayer;
+using AOPForYouAndMe.Models.Api;
+using AOPForYouAndMe.Models.DataLayer;
 
-namespace AOPForYouAndMe.Part1.Scattered.Models.Services
+namespace AOPForYouAndMe.Models.Services
 {
     // caching tangled and scattered
     // and direct dependency on HttpContent

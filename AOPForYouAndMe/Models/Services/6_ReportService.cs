@@ -1,7 +1,7 @@
-﻿using AOPForYouAndMe.Part1.Scattered.Models.Api;
-using AOPForYouAndMe.Part1.Scattered.Models.DataLayer;
+﻿using AOPForYouAndMe.Models.Api;
+using AOPForYouAndMe.Models.DataLayer;
 
-namespace AOPForYouAndMe.Part1.Scattered.Models.Services
+namespace AOPForYouAndMe.Models.Services
 {
     // using Castle DynamicProxy
     // no tangling, no scattering, yay!

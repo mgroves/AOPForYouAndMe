@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using AOPForYouAndMe.Part1.Scattered.Models.Api;
-using AOPForYouAndMe.Part1.Scattered.Models.Services;
-using AOPForYouAndMe.Part1.Scattered.Models.ViewModels;
+using AOPForYouAndMe.Models.Api;
+using AOPForYouAndMe.Models.Services;
+using AOPForYouAndMe.Models.ViewModels;
 
-namespace AOPForYouAndMe.Part1.Scattered.Controllers
+namespace AOPForYouAndMe.Controllers
 {
     public class HomeController : Controller
     {

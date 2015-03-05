@@ -5,7 +5,7 @@ using System.Web.Caching;
 using System.Web.Script.Serialization;
 using Castle.DynamicProxy;
 
-namespace AOPForYouAndMe.Part1.Scattered.Models.Caching
+namespace AOPForYouAndMe.Models.Caching
 {
     public class CacheInterceptor : IInterceptor
     {

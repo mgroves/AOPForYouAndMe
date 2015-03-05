@@ -1,9 +1,9 @@
 ﻿using System;
-using AOPForYouAndMe.Part1.Scattered.Models.Api;
-using AOPForYouAndMe.Part1.Scattered.Models.Caching;
-using AOPForYouAndMe.Part1.Scattered.Models.DataLayer;
+using AOPForYouAndMe.Models.Api;
+using AOPForYouAndMe.Models.Caching;
+using AOPForYouAndMe.Models.DataLayer;
 
-namespace AOPForYouAndMe.Part1.Scattered.Models.Services
+namespace AOPForYouAndMe.Models.Services
 {
     // better, still tangled and scattered
     public class ReportService : IReportService

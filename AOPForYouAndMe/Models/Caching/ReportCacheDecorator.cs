@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Web;
 using System.Web.Caching;
-using AOPForYouAndMe.Part1.Scattered.Models.Api;
-using AOPForYouAndMe.Part1.Scattered.Models.Services;
+using AOPForYouAndMe.Models.Api;
+using AOPForYouAndMe.Models.Services;
 
-namespace AOPForYouAndMe.Part1.Scattered.Models.Caching
+namespace AOPForYouAndMe.Models.Caching
 {
     public class ReportCacheDecorator : IReportService
     {

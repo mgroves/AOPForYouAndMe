@@ -2,7 +2,7 @@
 using System.Web;
 using System.Web.Caching;
 
-namespace AOPForYouAndMe.Part1.Scattered.Models.Caching
+namespace AOPForYouAndMe.Models.Caching
 {
     public interface ICacheService
     {

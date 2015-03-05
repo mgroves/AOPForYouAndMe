@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using AOPForYouAndMe.Part1.Scattered.Models.Api;
+using AOPForYouAndMe.Models.Api;
 
-namespace AOPForYouAndMe.Part1.Scattered.Models.ViewModels
+namespace AOPForYouAndMe.Models.ViewModels
 {
     public class ReportViewModel
     {

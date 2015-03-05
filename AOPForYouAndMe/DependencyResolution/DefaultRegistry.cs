@@ -15,8 +15,6 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-using AOPForYouAndMe.Part1.Scattered.Models.Caching;
-using AOPForYouAndMe.Part1.Scattered.Models.Services;
 using Castle.DynamicProxy;
 
 namespace AOPForYouAndMe.DependencyResolution {

@@ -1,7 +1,7 @@
-﻿using AOPForYouAndMe.Part1.Scattered.Models.Api;
-using AOPForYouAndMe.Part1.Scattered.Models.DataLayer;
+﻿using AOPForYouAndMe.Models.Api;
+using AOPForYouAndMe.Models.DataLayer;
 
-namespace AOPForYouAndMe.Part1.Scattered.Models.Services
+namespace AOPForYouAndMe.Models.Services
 {
     // no tangling...but is it still scattered?
     public class ReportService : IReportService

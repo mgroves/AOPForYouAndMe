@@ -15,23 +15,18 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-using AOPForYouAndMe.App_Start;
-
+using System.Web.Mvc;
+using AOPForYouAndMe;
+using AOPForYouAndMe.DependencyResolution;
+using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+using StructureMap;
 using WebActivatorEx;
 
 [assembly: PreApplicationStartMethod(typeof(StructuremapMvc), "Start")]
 [assembly: ApplicationShutdownMethod(typeof(StructuremapMvc), "End")]
 
-namespace AOPForYouAndMe.App_Start {
-	using System.Web.Mvc;
-
-    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-
-	using AOPForYouAndMe.DependencyResolution;
-
-    using StructureMap;
-    
-	public static class StructuremapMvc {
+namespace AOPForYouAndMe {
+    public static class StructuremapMvc {
         #region Public Properties
 
         public static StructureMapDependencyScope StructureMapDependencyScope { get; set; }

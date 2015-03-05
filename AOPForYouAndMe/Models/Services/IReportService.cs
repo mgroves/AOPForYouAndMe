@@ -1,6 +1,6 @@
-﻿using AOPForYouAndMe.Part1.Scattered.Models.Api;
+﻿using AOPForYouAndMe.Models.Api;
 
-namespace AOPForYouAndMe.Part1.Scattered.Models.Services
+namespace AOPForYouAndMe.Models.Services
 {
     public interface IReportService
     {
