@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOPForYouAndMe", "AOPForYouAndMe\AOPForYouAndMe.csproj", "{4849BAF3-056C-4B6C-A6CC-A4B8D1C8CB1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotifyPropertyChanged", "NotifyPropertyChanged\NotifyPropertyChanged.csproj", "{15F781F1-E7E6-4989-A845-3B84A3C5B677}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4849BAF3-056C-4B6C-A6CC-A4B8D1C8CB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4849BAF3-056C-4B6C-A6CC-A4B8D1C8CB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4849BAF3-056C-4B6C-A6CC-A4B8D1C8CB1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F781F1-E7E6-4989-A845-3B84A3C5B677}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F781F1-E7E6-4989-A845-3B84A3C5B677}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F781F1-E7E6-4989-A845-3B84A3C5B677}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F781F1-E7E6-4989-A845-3B84A3C5B677}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

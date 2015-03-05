@@ -2,7 +2,7 @@
 
 namespace NotifyPropertyChanged.MVVM
 {
-    //[ImplementPropertyChanged]
+    [ImplementPropertyChanged]
     public class NameViewModel
     {
         public string FirstName { get; set; }

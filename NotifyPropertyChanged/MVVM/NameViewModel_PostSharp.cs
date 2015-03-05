@@ -1,8 +1,5 @@
 ﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using NotifyPropertyChanged.Annotations;
 using NotifyPropertyChanged.Aspects;
-using PostSharp.Patterns.Model;
 
 namespace NotifyPropertyChanged.MVVM
 {
@@ -34,7 +31,7 @@ namespace NotifyPropertyChanged.MVVM
 //        {
 //            get
 //            {
-//                return string.Format("(PostSharp Ultimate) {0} {1}", FirstName, LastName);
+//                return string.Format("(PostSharp Patterns) {0} {1}", FirstName, LastName);
 //            }
 //        }
 //    }
