@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using AOPForYouAndMe.Models.Api;
+using AOPForYouAndMe.Models.Caching;
 using AOPForYouAndMe.Models.Services;
 using AOPForYouAndMe.Models.ViewModels;
 
@@ -12,16 +10,19 @@ namespace AOPForYouAndMe.Controllers
     {
         readonly IReportService _reportService;
 
-        public HomeController(IReportService reportService)
+        public HomeController(IReportService reportService, ICacheService cacheService)
         {
             _reportService = reportService;
+            _cacheService = cacheService;  // I'm only including this dependency for illustration
+                                            // in production code, this would not need to be here
         }
+        private readonly ICacheService _cacheService;
 
         public ActionResult Index()
         {
             var model = new ReportViewModel();
 
-            ViewBag.CacheDebug = GetCacheDebug();
+            ViewBag.CacheDebug = _cacheService.GetAllCacheContents();
             return View(model);
         }
 
@@ -40,31 +41,8 @@ namespace AOPForYouAndMe.Controllers
 
             model.Results = report;
 
-            ViewBag.CacheDebug = GetCacheDebug();
+            ViewBag.CacheDebug = _cacheService.GetAllCacheContents();
             return View(model);
-        }
-
-        List<string> GetCacheDebug()
-        {
-            var cacheDebugList = new List<string>();
-            foreach (DictionaryEntry cachedItem in HttpContext.Cache)
-            {
-                var cacheRecord = cachedItem.Key + " - " + cachedItem.Value;
-                if (IsExcluded(cacheRecord))
-                    continue;
-                cacheDebugList.Add(cacheRecord);
-            }
-            if(!cacheDebugList.Any())
-                cacheDebugList.Add("None");
-            return cacheDebugList;
-        }
-
-        bool IsExcluded(string cacheRecord)
-        {
-            return
-                cacheRecord.Contains("__System.Web.WebPages.Deployment__")
-                ||
-                cacheRecord.Contains("__AppStartPage__");
         }
     }
 }
