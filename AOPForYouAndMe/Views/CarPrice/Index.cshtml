@@ -1,0 +1,83 @@
+﻿@using AOPForYouAndMe.Models.Business
+@using Humanizer
+@model AOPForYouAndMe.Models.Business.CarPriceViewModel
+
+@{
+    ViewBag.Title = "Car Price";
+    Layout = "_Layout";
+}
+
+<h2>Car Price</h2>
+
+<fieldset>
+    <legend>Car Pricing</legend>
+    <form method="post">
+        <p>
+            Make:
+            @Html.DropDownList("make", new List<SelectListItem>
+            {
+                new SelectListItem{ Text="Select...", Value = ""},
+                new SelectListItem{ Text="Ford", Value = "Ford", Selected = Model.Form?.Make == "Ford" },
+                new SelectListItem{ Text="Chevy", Value = "Chevy", Selected = Model.Form?.Make == "Chevy" },
+                new SelectListItem{ Text="Honda", Value = "Honda", Selected = Model.Form?.Make == "Honda" },
+                new SelectListItem{ Text="Chrysler", Value = "Chrysler", Selected = Model.Form?.Make == "Chrysler" }
+            }) 
+        </p>
+        <p>
+            Model:
+            @Html.DropDownList("model", new List<SelectListItem>
+            {
+                new SelectListItem{ Text="Select...", Value = ""},
+                new SelectListItem{ Text="Coupe", Value = "Coupe", Selected = Model.Form?.Model == "Coupe" },
+                new SelectListItem{ Text="Sedan", Value = "Sedan", Selected = Model.Form?.Model == "Sedan" },
+                new SelectListItem{ Text="SUV", Value = "SUV", Selected = Model.Form?.Model == "SUV" },
+                new SelectListItem{ Text="Minivan", Value = "Minivan", Selected = Model.Form?.Model == "Minivan" },
+                new SelectListItem{ Text="Sports", Value = "Sports", Selected = Model.Form?.Model == "Sports" },
+            })
+        </p>
+        <p>
+            Year:
+            @Html.DropDownList("year", Enumerable.Range(DateTime.Now.AddYears(-15).Year, 15)
+                .Select(y => y.ToString())
+                .Select(z => new SelectListItem { Text = z, Value = z, Selected = Model.Form?.Year == z})
+                .Reverse()
+                .ToList()
+                .Prepend(new SelectListItem { Text ="Select...", Value=""}))
+        </p>
+        <p><input type="submit" value="Get Price" /></p>
+    </form>
+    
+    @if (Model.Price != null)
+    {
+        <ul>
+            <li>Fair price: @string.Format("{0:C}", @Model.Price.Fair)</li>
+            <li>Good price: @string.Format("{0:C}", @Model.Price.Good)</li>
+            <li>Excellent price: @string.Format("{0:C}", @Model.Price.Excellent)</li>
+        </ul>
+
+        <p>Elapsed Time: @Model.ElapsedTime.Humanize()</p>
+    } else if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <p><strong>Error:</strong> @Model.ErrorMessage</p>
+    }
+</fieldset>
+
+<fieldset>
+    <legend>What's in the cache</legend>
+    <table class="table">
+        <tr>
+            <th>Key</th><th>Value</th>
+        </tr>
+        @if (Model.CachedItems == null || !Model.CachedItems.Any())
+        {
+            <tr><td colspan="2">Nothing.</td></tr>
+        }
+        else
+        {
+            foreach (var item in Model.CachedItems)
+            {
+                <tr><td>@item.Key</td><td>@item.Value</td></tr>
+            }
+        }
+    </table>
+    </fieldset>
