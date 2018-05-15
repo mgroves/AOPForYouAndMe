@@ -1,4 +1,5 @@
 ﻿using System.Threading;
+using AOPForYouAndMe.Models.Business;
 using Couchbase;
 using Couchbase.Core;
 using Couchbase.Extensions.DependencyInjection;

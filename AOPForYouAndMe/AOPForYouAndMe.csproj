@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Models\1_SlowLegacyService.cs" />
     <Compile Remove="Models\2_SlowLegacyService.cs" />
     <Compile Remove="Models\3_SlowLegacyService.cs" />
     <Compile Remove="Models\4_SlowLegacyService.cs" />
     <Compile Remove="Models\5_SlowLegacyService.cs" />
+    <Compile Remove="Models\6_SlowLegacyService.cs" />
   </ItemGroup>
 
   <ItemGroup>

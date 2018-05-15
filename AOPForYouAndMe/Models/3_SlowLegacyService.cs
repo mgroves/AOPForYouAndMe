@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using AOPForYouAndMe.Models.Business;
 using Couchbase.Extensions.Caching;
 using Microsoft.Extensions.Caching.Distributed;
 

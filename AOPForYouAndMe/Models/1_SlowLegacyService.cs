@@ -1,5 +1,5 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
+using AOPForYouAndMe.Models.Business;
 
 namespace AOPForYouAndMe.Models
 {
